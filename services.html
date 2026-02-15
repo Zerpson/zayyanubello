@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Zayyanu Bello</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: #0f172a;
+            scroll-behavior: smooth;
+        }
+
+        /* Fixed Opaque Header */
+        nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #f1f5f9;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+        }
+
+        .service-card {
+            background: #ffffff;
+            border: 1px solid #f1f5f9;
+            border-radius: 32px;
+            padding: 40px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            border-color: #4f46e5;
+            box-shadow: 0 30px 60px -15px rgba(79, 70, 229, 0.12);
+            transform: translateY(-8px);
+        }
+
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .icon-box {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .img-grid {
+            border-radius: 24px;
+            overflow: hidden;
+            height: 200px;
+            margin-bottom: 24px;
+            background: #f8fafc;
+        }
+
+        .img-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .service-card:hover .img-grid img {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Menu */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+            background-color: #ffffff;
+            z-index: 100;
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-extrabold tracking-tighter shrink-0">
+                Zayyanu Bello<span class="text-indigo-600">.</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-indigo-600 transition">Home</a>
+                <a href="about-me.html" class="hover:text-indigo-600 transition">About</a>
+                <a href="index.html#work" class="hover:text-indigo-600 transition">Work</a>
+            </div>
+
+            <a href="mailto:zayyanubello023@gmail.com" class="hidden md:block bg-indigo-600 text-white px-7 py-2.5 rounded-full text-sm font-bold hover:bg-indigo-700 transition shadow-md">
+                Start Project
+            </a>
+
+            <button id="menu-toggle" class="md:hidden text-slate-900 p-2 bg-slate-50 rounded-lg border border-slate-200">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 md:hidden flex flex-col p-8 space-y-6">
+            <div class="flex justify-between items-center mb-4">
+                <div class="text-xl font-extrabold tracking-tighter text-slate-900">Zayyanu Bello<span class="text-indigo-600">.</span></div>
+                <button id="menu-close" class="text-slate-900 p-2 bg-slate-50 rounded-lg">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <a href="index.html" class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2">Home</a>
+            <a href="about-me.html" class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2">About</a>
+            <a href="index.html#work" class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2">Work</a>
+            <a href="mailto:zayyanubello023@gmail.com" class="bg-indigo-600 text-white text-center py-4 rounded-2xl font-bold mt-4">Get a Quote</a>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-20 gradient-bg px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="reveal inline-block px-4 py-1.5 mb-6 text-[10px] font-bold tracking-[0.2em] text-indigo-600 uppercase bg-indigo-50 rounded-full">
+                What I Do
+            </span>
+            <h1 class="reveal text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-slate-900">
+                Professional Solutions for <br><span class="text-indigo-600">Modern Digital Growth.</span>
+            </h1>
+            <p class="reveal text-slate-500 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+                Helping businesses at Hammad Technologies and beyond build scalable products with clean architecture and data-driven insights.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="reveal service-card">
+                    <div class="img-grid">
+                        <img src="app-dev.png" alt="Mobile Development" onerror="this.src='https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=600'">
+                    </div>
+                    <div class="icon-box bg-indigo-50 text-indigo-600">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-900">App Development</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                        Cross-platform mobile apps using **React Native** and **Expo**. Proven experience building Fintech (VTU) and artist-centric apps like Salim Smart's mobile platform.
+                    </p>
+                    <ul class="text-[10px] font-bold text-slate-400 space-y-2 uppercase tracking-widest border-t border-slate-50 pt-6">
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-indigo-500"></i> iOS & Android</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-indigo-500"></i> API Integration</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-indigo-500"></i> Secure Payments</li>
+                    </ul>
+                </div>
+
+                <div class="reveal service-card" style="transition-delay: 100ms;">
+                    <div class="img-grid">
+                        <img src="web-dev.png" alt="Web Development" onerror="this.src='https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600'">
+                    </div>
+                    <div class="icon-box bg-cyan-50 text-cyan-600">
+                        <i data-lucide="code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-900">Web Development</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                        Scalable, high-performance web applications built with a cutting-edge stack including PHP (Laravel), JavaScript (Next.js), TypeScript, and Python. Specialized in architecting complex digital ecosystems like the NaijaJobSmart portal and enterprise-grade e-commerce solutions for Medprin Supermarket.
+                    </p>
+                    <ul class="text-[10px] font-bold text-slate-400 space-y-2 uppercase tracking-widest border-t border-slate-50 pt-6">
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-cyan-500"></i> Admin Dashboards</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-cyan-500"></i> Job Portals</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-cyan-500"></i> SEO Frameworks</li>
+                    </ul>
+                </div>
+
+                <div class="reveal service-card" style="transition-delay: 200ms;">
+                    <div class="img-grid">
+                        <img src="ui-ux.png" alt="UI/UX Design" onerror="this.src='https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=600'">
+                    </div>
+                    <div class="icon-box bg-rose-50 text-rose-600">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-900">UI/UX Design</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                        User-centered designs that look professional and convert. Designing functional interfaces for specialized brands like Guisab Beauty Saloon.
+                    </p>
+                    <ul class="text-[10px] font-bold text-slate-400 space-y-2 uppercase tracking-widest border-t border-slate-50 pt-6">
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-rose-500"></i> Wireframing</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-rose-500"></i> Visual Identity</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-rose-500"></i> Prototypes</li>
+                    </ul>
+                </div>
+
+                <div class="reveal service-card">
+                    <div class="img-grid">
+                        <img src="data-service.png" alt="Data Analysis" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600'">
+                    </div>
+                    <div class="icon-box bg-emerald-50 text-emerald-600">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-900">Data Analysis</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                        Google-certified data analysis using Excel, SQL, and R. Interpreting complex data to help businesses at Hammad Technologies make informed decisions.
+                    </p>
+                    <ul class="text-[10px] font-bold text-slate-400 space-y-2 uppercase tracking-widest border-t border-slate-50 pt-6">
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-emerald-500"></i> Insights Reports</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-emerald-500"></i> Visual Dashboards</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-emerald-500"></i> DB Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="reveal service-card" style="transition-delay: 100ms;">
+                    <div class="img-grid">
+                        <img src="api-service.png" alt="API Development" onerror="this.src='https://images.unsplash.com/photo-1623282033815-40b05d96c903?q=80&w=600'">
+                    </div>
+                    <div class="icon-box bg-orange-50 text-orange-600">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-900">API Development</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                        Creating secure and high-speed RESTful APIs to power your mobile and web applications with seamless efficiency.
+                    </p>
+                    <ul class="text-[10px] font-bold text-slate-400 space-y-2 uppercase tracking-widest border-t border-slate-50 pt-6">
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-orange-500"></i> Payment Integration</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-orange-500"></i> Secure Auth</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-orange-500"></i> Webhooks</li>
+                    </ul>
+                </div>
+
+                <div class="reveal service-card" style="transition-delay: 200ms;">
+                    <div class="img-grid">
+                        <img src="support.png" alt="Maintenance" onerror="this.src='https://images.unsplash.com/photo-1454165833767-027ffea9e7a7?q=80&w=600'">
+                    </div>
+                    <div class="icon-box bg-purple-50 text-purple-600">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-900">Support & Scaling</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                        Reliable long-term technical support to ensure your application stays updated, secure, and ready for high-traffic growth.
+                    </p>
+                    <ul class="text-[10px] font-bold text-slate-400 space-y-2 uppercase tracking-widest border-t border-slate-50 pt-6">
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-purple-500"></i> Security Audits</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-purple-500"></i> Performance Tuning</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 mr-2 text-purple-500"></i> 24/7 Monitoring</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-slate-900 text-white rounded-[50px] mx-6 mb-12 overflow-hidden relative">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-8">Ready to bring your project to life?</h2>
+            <p class="text-slate-400 mb-10 text-lg md:text-xl">Let's discuss how my technical expertise can help you achieve your business goals.</p>
+            <a href="mailto:zayyanubello023@gmail.com" class="inline-block bg-indigo-600 text-white px-10 py-5 rounded-2xl font-bold hover:bg-indigo-700 transition shadow-xl shadow-indigo-500/20">Get a Free Quote</a>
+        </div>
+        <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-600/20 blur-[100px] rounded-full"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-cyan-600/10 blur-[100px] rounded-full"></div>
+    </section>
+
+    <footer class="py-12 text-center border-t border-slate-100">
+        <p class="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em]">© 2026 ZAYYANU BELLO • PROFESSIONAL SERVICES</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Responsive Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closeMenu = () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        menuClose.addEventListener('click', closeMenu);
+
+        // Scroll Reveal
+        ScrollReveal().reveal('.reveal', {
+            distance: '60px',
+            duration: 1000,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            interval: 100,
+            origin: 'bottom',
+            opacity: 0
+        });
+    </script>
+</body>
+</html>

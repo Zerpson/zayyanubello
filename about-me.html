@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Zayyanu Bello</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --secondary: #06b6d4;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fafafa;
+            color: #0f172a;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .skill-tag {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 10px 18px;
+            border-radius: 14px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #475569;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .skill-tag:hover {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 20px -5px rgba(79, 70, 229, 0.3);
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            padding: 10px;
+        }
+
+        .about-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 40px;
+            transform: rotate(-3deg);
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .about-image-container {
+            position: relative;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.12);
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+
+        nav {
+            backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+        }
+
+        .experience-card {
+            background: #ffffff;
+            border: 1px solid #f1f5f9;
+            padding: 2rem;
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .experience-card:hover {
+            border-color: #e2e8f0;
+            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black tracking-tighter">
+                Zayyanu<span class="text-indigo-600">.</span>
+            </a>
+            <a href="index.html" class="flex items-center text-sm font-bold text-slate-500 hover:text-indigo-600 transition-all group">
+                <i data-lucide="arrow-left" class="mr-2 w-4 h-4 transition-transform group-hover:-translate-x-1"></i> 
+                Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <main class="pt-40 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                
+                <div class="reveal about-image-wrapper">
+                    <div class="about-image-container">
+                        <img src="profile.png" alt="Zayyanu Bello" class="w-full h-[550px] object-cover" onerror="this.src='https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800'">
+                        <div class="absolute bottom-6 left-6 right-6 bg-white/70 backdrop-blur-xl p-6 rounded-2xl border border-white/40 shadow-2xl">
+                            <p class="text-lg font-bold text-slate-900">Zayyanu Bello</p>
+                            <p class="text-sm font-medium text-indigo-600">Lead Developer & Senior Data Analyst</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <span class="inline-block px-4 py-1.5 mb-6 text-[11px] font-bold tracking-[0.2em] text-indigo-600 uppercase bg-indigo-50 rounded-full">
+                        Expertise & Vision
+                    </span>
+                    <h1 class="text-5xl md:text-6xl font-black mb-8 leading-[1.1] text-slate-900">
+                        Crafting digital tools with <span class="gradient-text">precision.</span>
+                    </h1>
+                    <p class="text-slate-500 text-lg mb-6 leading-relaxed">
+                        I am a high-impact Developer and Data Analyst operating across <strong>Kano, Jigawa, and Zamfara</strong>. My core mission is bridging the gap between raw data and seamless user interfaces using <strong>React Native Expo</strong> and <strong>PHP</strong>.
+                    </p>
+                    <p class="text-slate-500 text-lg mb-10 leading-relaxed">
+                        With my background at <strong>Hammad Technologies</strong>, I don't just write code—I engineer scalable solutions like the <em>NaijaJobSmart</em> portal and high-performance Fintech ecosystems.
+                    </p>
+
+                    <div class="mb-12">
+                        <h4 class="font-bold text-slate-900 mb-6 flex items-center">
+                            <i data-lucide="cpu" class="mr-2 w-5 h-5 text-indigo-600"></i> Tech Stack
+                        </h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">PHP / Laravel</span>
+                            <span class="skill-tag">Expo Ecosystem</span>
+                            <span class="skill-tag">SQL & NoSQL</span>
+                            <span class="skill-tag">Data Visualization</span>
+                            <span class="skill-tag">Android Studio</span>
+                            <span class="skill-tag">UI/UX Strategy</span>
+                            <span class="skill-tag">Python</span>
+                        </div>
+                    </div>
+
+                    <a href="my-resume.pdf" target="_blank" class="group inline-flex items-center bg-slate-900 text-white px-10 py-4.5 rounded-2xl font-bold hover:bg-indigo-600 transition-all shadow-xl shadow-slate-200">
+                        Download Resume 
+                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="py-24 bg-white px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900">Professional Journey</h2>
+                <div class="w-20 h-1.5 bg-indigo-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="reveal experience-card">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-slate-900">Hammad Technologies & Consultancy</h3>
+                        <span class="text-indigo-600 font-bold text-sm bg-indigo-50 px-3 py-1 rounded-lg">2020 — PRESENT</span>
+                    </div>
+                    <p class="text-slate-900 font-semibold mb-3">Senior Lead Developer</p>
+                    <p class="text-slate-500 leading-relaxed">Architected the NaijaJobSmart ecosystem and multi-tenant VTU fintech platforms. Specialized in cross-platform performance optimization and secure backend logic.</p>
+                </div>
+
+                <div class="reveal experience-card" style="transition-delay: 150ms;">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-slate-900">Independent Consultant</h3>
+                        <span class="text-slate-400 font-bold text-sm bg-slate-50 px-3 py-1 rounded-lg">2018 — PRESENT</span>
+                    </div>
+                    <p class="text-slate-900 font-semibold mb-3">Full-Stack Solution Architect</p>
+                    <p class="text-slate-500 leading-relaxed">Built and scaled SMK Data Sub and NasDataSub from ground zero. Handled full product lifecycle from user journey mapping to cloud deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 text-center bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-slate-400 text-xs font-bold uppercase tracking-[0.3em]">
+                © 2026 Zayyanu Bello • Designed for Excellence
+            </p>
+            <div class="mt-6 flex justify-center space-x-6 text-slate-400">
+                <a href="#" class="hover:text-indigo-600 transition"><i data-lucide="github" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-indigo-600 transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-indigo-600 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        ScrollReveal().reveal('.reveal', {
+            distance: '60px',
+            duration: 1200,
+            easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+            interval: 200,
+            origin: 'bottom',
+            opacity: 0
+        });
+    </script>
+</body>
+</html>

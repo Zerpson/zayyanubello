@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zayyanu Bello | Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --bg-light: #ffffff;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: #0f172a;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* FIXED: Opaque Colored Header */
+        nav {
+            background-color: #ffffff; /* Solid White */
+            border-bottom: 1px solid #f1f5f9;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-card {
+            background: #ffffff;
+            border: 1px solid #f1f5f9;
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.1);
+            border-color: #e2e8f0;
+        }
+
+        .img-container {
+            overflow: hidden;
+            height: 220px;
+        }
+        
+        .service-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.1);
+        }
+
+        section {
+            scroll-margin-top: 80px;
+        }
+
+        /* Mobile Menu - Solid Color */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+            background-color: #ffffff; /* Solid White */
+            z-index: 100;
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Hero Image Container */
+        .hero-img-box {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 20px 20px 60px #d1d1d1, -20px -20px 60px #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-extrabold tracking-tighter shrink-0">
+                Zayyanu Bello<span class="text-indigo-600">.</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="services.html" class="hover:text-indigo-600 transition">Services</a>
+                <a href="#work" class="hover:text-indigo-600 transition">Work</a>
+                <a href="about-me.html" class="hover:text-indigo-600 transition">About Me</a>
+            </div>
+
+            <a href="mailto:zayyanubello023@gmail.com" class="hidden md:block bg-slate-900 text-white px-6 py-2.5 rounded-full text-xs font-bold hover:bg-indigo-600 transition-all duration-300">
+                Get In Touch
+            </a>
+
+            <button id="menu-toggle" class="md:hidden text-slate-900 focus:outline-none">
+                <i data-lucide="menu" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-40 md:hidden flex flex-col p-8 space-y-6">
+            <div class="flex justify-between items-center mb-4">
+                <div class="text-xl font-extrabold tracking-tighter">Zayyanu Bello<span class="text-indigo-600">.</span></div>
+                <button id="menu-close" class="text-slate-900">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <a href="services.html" class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2">Services</a>
+            <a href="#work" class="mobile-link text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2">Work</a>
+            <a href="about-me.html" class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2">About Me</a>
+            <a href="mailto:zayyanubello023@gmail.com" class="bg-indigo-600 text-white text-center py-4 rounded-2xl font-bold">Contact Me</a>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-16 md:pt-48 md:pb-32 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <span class="reveal inline-block px-4 py-1 mb-6 text-[10px] font-bold tracking-[0.2em] text-indigo-600 uppercase bg-indigo-50 rounded-full">
+                Expert Developer & Designer
+            </span>
+            <h1 class="reveal text-4xl md:text-7xl font-extrabold text-slate-900 mb-8 leading-[1.1]">
+                Building <span class="gradient-text">Exceptional</span> <br>Digital Experiences
+            </h1>
+            <p class="reveal max-w-2xl mx-auto text-slate-500 text-base md:text-lg mb-10 leading-relaxed">
+                Specializing in high-performance mobile apps and web platforms that combine robust performance with professional aesthetics.
+            </p>
+            <div class="reveal flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#work" class="bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold hover:shadow-lg hover:shadow-indigo-200 transition-all">View All Projects</a>
+                <a href="services.html" class="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition-all">My Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-slate-50/50 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <h3 class="text-indigo-600 font-bold mb-2 uppercase tracking-widest text-xs">Expertise</h3>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Services I Offer</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="reveal service-card">
+                    <div class="img-container">
+                        <img src="app-dev.png" alt="App Development" onerror="this.src='https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800'">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3">App Development</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Cross-platform mobile solutions using React Native and Expo for iOS and Android.</p>
+                    </div>
+                </div>
+
+                <div class="reveal service-card" style="transition-delay: 100ms;">
+                    <div class="img-container">
+                        <img src="web-dev.png" alt="Web Development" onerror="this.src='https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800'">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3">Web Development</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Scalable web applications built with modern PHP, Next.js, and Typescript.</p>
+                    </div>
+                </div>
+
+                <div class="reveal service-card" style="transition-delay: 200ms;">
+                    <div class="img-container">
+                        <img src="ui-ux.png" alt="UI/UX Design" onerror="this.src='https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=800'">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Creating intuitive interfaces and user journeys that are both functional and aesthetic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                <div>
+                    <h3 class="text-indigo-600 font-bold mb-2 uppercase tracking-widest text-xs">Portfolio</h3>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Featured Projects</h2>
+                </div>
+                <p class="text-slate-500 max-w-sm text-sm">A collection of fintech apps, corporate websites, and enterprise solutions.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="reveal project-card">
+                    <div class="relative overflow-hidden rounded-[24px] bg-slate-100 h-[260px] group">
+                        <img src="affan.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="AffanDataSub" onerror="this.src='https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800'">
+                    </div>
+                    <div class="mt-5">
+                        <h4 class="text-xl font-bold text-slate-900">AffanDataSub</h4>
+                        <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mt-1">Fintech • VTU App</p>
+                    </div>
+                </div>
+
+                <div class="reveal project-card" style="transition-delay: 100ms;">
+                    <div class="relative overflow-hidden rounded-[24px] bg-slate-100 h-[260px] group">
+                        <img src="smk.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="SMKDataSub" onerror="this.src='https://images.unsplash.com/photo-1616077168079-7e09a677fb2c?q=80&w=800'">
+                    </div>
+                    <div class="mt-5">
+                        <h4 class="text-xl font-bold text-slate-900">SMKDataSub</h4>
+                        <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mt-1">Mobile App • Data Services</p>
+                    </div>
+                </div>
+
+                <div class="reveal project-card" style="transition-delay: 200ms;">
+                    <div class="relative overflow-hidden rounded-[24px] bg-slate-100 h-[260px] group">
+                        <img src="bundle.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="BundleDataSub" onerror="this.src='https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800'">
+                    </div>
+                    <div class="mt-5">
+                        <h4 class="text-xl font-bold text-slate-900">BundleDataSub</h4>
+                        <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mt-1">Fintech • Mobile Solution</p>
+                    </div>
+                </div>
+
+                <div class="reveal project-card">
+                    <div class="relative overflow-hidden rounded-[24px] bg-slate-100 h-[260px] group">
+                        <img src="medprin.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Medprin Supermarket" onerror="this.src='https://images.unsplash.com/photo-1534452203294-49c8ad160cae?q=80&w=800'">
+                    </div>
+                    <div class="mt-5">
+                        <h4 class="text-xl font-bold text-slate-900">Medprin Supermarket</h4>
+                        <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mt-1">Web Development • E-commerce</p>
+                    </div>
+                </div>
+
+                <div class="reveal project-card" style="transition-delay: 100ms;">
+                    <div class="relative overflow-hidden rounded-[24px] bg-slate-100 h-[260px] group">
+                        <img src="guisab.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Guisab Beauty Saloon" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800'">
+                    </div>
+                    <div class="mt-5">
+                        <h4 class="text-xl font-bold text-slate-900">Guisab Beauty Saloon</h4>
+                        <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mt-1">UI/UX • Brand Website</p>
+                    </div>
+                </div>
+
+                <div class="reveal project-card" style="transition-delay: 200ms;">
+                    <div class="relative overflow-hidden rounded-[24px] bg-slate-100 h-[260px] group">
+                        <img src="jobportal.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="NaijaJobSmart" onerror="this.src='https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=800'">
+                    </div>
+                    <div class="mt-5">
+                        <h4 class="text-xl font-bold text-slate-900">NaijaJobSmart</h4>
+                        <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mt-1">Job Portal • Web App</p>
+                    </div>
+                </div>
+
+                <div class="reveal project-card">
+                    <div class="relative overflow-hidden rounded-[24px] bg-slate-100 h-[260px] group">
+                        <img src="nigerian.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Nigerian Investment" onerror="this.src='https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=800'">
+                    </div>
+                    <div class="mt-5">
+                        <h4 class="text-xl font-bold text-slate-900">Nigerian Investment</h4>
+                        <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mt-1">Platform • Finance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-12 border-t border-slate-100 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold mb-6 text-slate-900">Let's build something great together.</h2>
+            <div class="flex justify-center space-x-8 mb-8 text-slate-400">
+                <a href="https://facebook.com/@zayyanubello3237" target="_blank" class="hover:text-blue-600 transition-colors duration-300">
+                    <i data-lucide="facebook" class="w-6 h-6"></i>
+                </a>
+                <a href="https://wa.me/2349030388023" target="_blank" class="hover:text-green-500 transition-colors duration-300">
+                    <i data-lucide="message-circle" class="w-6 h-6"></i>
+                </a>
+            </div>
+            <p class="text-slate-400 text-[10px] uppercase tracking-widest font-bold leading-relaxed">
+                © 2026 Zayyanu Bello • Kano, Jigawa and Zamfara, Nigeria
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Responsive Menu Toggle Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Stop scrolling
+        });
+
+        const closeMenu = () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Resume scrolling
+        };
+
+        menuClose.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // Scroll Reveal Animations
+        ScrollReveal().reveal('.reveal', {
+            distance: '40px',
+            duration: 1000,
+            easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+            interval: 100,
+            origin: 'bottom',
+            opacity: 0
+        });
+    </script>
+</body>
+</html>
